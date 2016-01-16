@@ -31,7 +31,7 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     width:100%;
 }
 
@@ -108,4 +108,13 @@ h1 {
     background: norepeat;
     padding-top: 20px;
     text-align: center;
+}
+
+.credit{
+    text-align: right;
+}
+
+.credit-img{
+    width: 50px;
+    height: 50px;
 }
