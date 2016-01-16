@@ -61,6 +61,9 @@ var microgear = Microgear.create({
 microgear.on('connected', function() {
     microgear.setname('controllerplug');
     console.log("Device connected.")
+    var status = document.getElementById("status");
+    status.innerHTML = "Device connected";
+    
 });
 
 microgear.resettoken(function(err){
