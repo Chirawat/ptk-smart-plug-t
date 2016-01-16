@@ -46,4 +46,37 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    
 };
+
+//===============================================================
+const APPKEY = "1l4nYdDBtuDPeLP";
+const APPSECRET = "CSGW3mwLBoa0JgKeFHSYA58rm3PbDl";
+const APPID = "ptk";
+var microgear = Microgear.create({
+    gearkey: APPKEY,
+    gearsecret: APPSECRET
+});
+
+microgear.on('connected', function() {
+    microgear.setname('controllerplug');
+    console.log("Device connected.")
+});
+
+microgear.resettoken(function(err){
+    microgear.connect(APPID);
+    console.log("Reset Token");
+});
+
+function changeImage(){
+    var image = document.getElementById('myImage');
+    if(image.src.match("img/light.png")){
+        image.src = "img/dark.png";
+        microgear.chat("ptkplug", "OFF")
+    }
+    else{
+        image.src = "img/light.png";
+        microgear.chat("ptkplug", "ON")
+    }
+}
+

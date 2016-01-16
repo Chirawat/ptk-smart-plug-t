@@ -30,14 +30,14 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Spmart Plug</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+        <div class="app-new">
+            <img id="myImage" onclick="changeImage()" src="img/light.png">
+            <h2>TAP TO ON/OFF</h2>
         </div>
+
+        
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/microgear.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
